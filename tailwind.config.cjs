@@ -20,6 +20,9 @@ module.exports = {
     fontFamily: {
       sans: ["Montserrat", ...FONT_FAMILY_BASE],
     },
+    borderRadius: {
+      DEFAULT: "10px",
+    },
     boxShadow: {
       DEFAULT: `0 2.6px 2.1px rgba(0, 0, 0, 0.025),
       0 6.6px 5.2px rgba(0, 0, 0, 0.036), 0 13.5px 10.6px rgba(0, 0, 0, 0.045),
@@ -38,7 +41,7 @@ module.exports = {
         xs: "450px",
       },
       colors: {
-        primary: "#24685e",
+        primary: "#00c24e",
         "primary-light": "#F0FAF8",
         accent: "#00c24e",
         background: "#f9f9f9",

@@ -1,13 +1,14 @@
 ---
+import { Icon } from "astro-icon";
 import NavMenu from "./NavMenu";
 const links = [
-  { linkText: "About Us", link: "/about" },
+  { linkText: "About", link: "/about" },
   {
-    linkText: "Scholarships",
-    link: "/scholarships",
+    linkText: "Services",
+    link: "/services",
   },
-  { linkText: "Success Stories", link: "/success-stories" },
-  { linkText: "Contact Us", link: "/contact" },
+  { linkText: "Pricing", link: "/pricing" },
+  { linkText: "Contact", link: "/contact" },
 ];
 
 interface Props {
@@ -20,7 +21,9 @@ const { className } = Astro.props;
   class={(className ? className : "") +
     " p-5 flex items-center justify-between relative"}
 >
-  <a href="/" class="font-logo text-2xl">Roxbury Scholarship Foundation</a>
+  <a href="/" class="font-logo text-2xl">
+    <Icon name="logo" class="w-[158px] h-[60px]" />
+  </a>
 
   <NavMenu links={links} client:load />
 </header>

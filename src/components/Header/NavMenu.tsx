@@ -18,7 +18,7 @@ const NavMenu = ({ links }: Props) => {
     <div>
       <ul
         className={
-          "absolute top-[104px] z-50 flex w-full flex-col items-start gap-6 bg-white py-5 px-4 text-lg transition-all duration-300 xl:static xl:w-auto xl:flex-row xl:items-center xl:bg-transparent xl:py-0 xl:px-0 xs:top-[75px] " +
+          "absolute top-[104px] z-50 flex w-full flex-col items-start gap-6 bg-white py-5 px-4 text-lg transition-all duration-300 xs:top-[75px] xl:static xl:w-auto xl:flex-row xl:items-center xl:bg-transparent xl:py-0 xl:px-0 " +
           (isOpen
             ? "left-0 z-40 !text-black shadow shadow-neutral-300"
             : "-left-full")
@@ -29,11 +29,8 @@ const NavMenu = ({ links }: Props) => {
             <a href={link.link}>{link.linkText}</a>
           </li>
         ))}
-        <li className="block w-full rounded border border-white bg-primary py-2 px-4 text-center font-bold text-white xl:inline xl:w-auto">
-          <a href="/apply">Apply Now</a>
-        </li>
-        <li className="block w-full rounded border border-primary bg-white py-2 px-4 text-center font-bold text-primary xl:inline xl:w-auto">
-          <a href="/donate">Donate</a>
+        <li className="block w-full rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary xl:inline xl:w-auto">
+          <a href="/apply">Request My Free Review</a>
         </li>
       </ul>
       <Hamburger clicked={handleClick} isOpen={isOpen} />
