@@ -22,11 +22,10 @@ module.exports = {
     },
     borderRadius: {
       DEFAULT: "10px",
+      full: "50%",
     },
     boxShadow: {
-      DEFAULT: `0 2.6px 2.1px rgba(0, 0, 0, 0.025),
-      0 6.6px 5.2px rgba(0, 0, 0, 0.036), 0 13.5px 10.6px rgba(0, 0, 0, 0.045),
-      0 27.7px 21.9px rgba(0, 0, 0, 0.055), 0 76px 60px rgba(0, 0, 0, 0.07);`,
+      DEFAULT: "0px 19px 33px rgba(0, 0, 0, 0.05)",
     },
     extend: {
       spacing: {
@@ -43,7 +42,8 @@ module.exports = {
       colors: {
         primary: "#00c24e",
         "primary-light": "#F0FAF8",
-        accent: "#00c24e",
+        accent: "#24685F",
+        leaf: "#B2CF5E",
         background: "#f9f9f9",
         "background-darker": "#e0e0e0",
         text: "#000",
