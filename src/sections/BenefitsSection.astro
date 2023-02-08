@@ -1,0 +1,39 @@
+---
+import ImageCard from "@components/Cards/ImageCard.astro";
+
+const benefits = [
+  {
+    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
+    title: "Simplify Simplify Simplify",
+    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+  },
+  {
+    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
+    title: "Simplify Simplify Simplify",
+    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+  },
+  {
+    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
+    title: "Simplify Simplify Simplify",
+    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+  },
+];
+---
+
+<section class="px-edge py-20">
+  <div class="mx-auto max-w-screen-xl">
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-bold">
+        There's A Better Way To Market Your Business... The Simply Sprout Way!
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed">
+        Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your
+        online partner. All of our services have been carefully crafted with you
+        in mind.
+      </p>
+    </div>
+    <div class="mt-20 flex justify-center gap-10">
+      {benefits.map((benefit) => <ImageCard data={benefit} />)}
+    </div>
+  </div>
+</section>

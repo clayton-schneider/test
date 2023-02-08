@@ -1,5 +1,7 @@
 ---
+import BenefitsSection from "src/sections/BenefitsSection.astro";
 import ReviewSection from "src/sections/ReviewSection.astro";
+import ServicesSection from "src/sections/ServicesSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,5 +11,82 @@ import Layout from "../layouts/Layout.astro";
     metaDescription: "Meta Description For Simply Sprout",
   }}
 >
+  <section class="px-edge py-20">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="flex justify-between gap-10">
+        <div class="max-w-2xl">
+          <h1 class="text-lg">Web Design Agency</h1>
+          <h2 class="text-4xl font-bold">
+            What if your website generated more traffic, leads, and sales?
+          </h2>
+          <p class="mt-5 max-w-lg text-lg leading-relaxed">
+            Not sure where to start? Request your free review of your website
+            and marketing. We’ll show you how to make improvements in just 15
+            minutes!
+          </p>
+        </div>
+        <div class="h-[400px] w-[500px] bg-red-50"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-20">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="flex justify-between gap-10">
+        <div class="h-[660px] w-[780px] bg-red-50"></div>
+        <div class="max-w-xl">
+          <h2 class="text-4xl font-bold">
+            A Web Design Agency For Busy Business Owners
+          </h2>
+          <div class="my-5 space-y-5 text-lg">
+            <p>
+              We’re Simply Sprout, and we design websites that generate paying
+              clients.
+            </p>
+            <p>
+              Most websites end up neglected and we don’t blame you. Staying on
+              top of your website is a time consuming task.
+            </p>
+            <p>
+              That’s why busy business owners just like you partner with Simply
+              Sprout. Your marketing partner dedicated to helping your spend
+              more time on what you love.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <ReviewSection />
+  <BenefitsSection />
+
+  <section class="px-edge py-20">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="flex justify-between gap-10">
+        <div class="h-[660px] w-[780px] bg-red-50"></div>
+        <div class="max-w-xl">
+          <h2 class="text-4xl font-bold">
+            A Web Design Agency For Busy Business Owners
+          </h2>
+          <div class="my-5 space-y-5 text-lg">
+            <p>
+              We’re Simply Sprout, and we design websites that generate paying
+              clients.
+            </p>
+            <p>
+              Most websites end up neglected and we don’t blame you. Staying on
+              top of your website is a time consuming task.
+            </p>
+            <p>
+              That’s why busy business owners just like you partner with Simply
+              Sprout. Your marketing partner dedicated to helping your spend
+              more time on what you love.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <ServicesSection />
 </Layout>

@@ -6,10 +6,8 @@ export interface Props {
       src: Promise<any>;
       alt: string;
     };
-    review: string;
-    name: string;
-    link?: string;
-    business: string;
+    text: string;
+    title: string;
   };
   className?: string;
 }
@@ -21,14 +19,6 @@ const { data, className = "" } = Astro.props;
   class={className + " w-full max-w-md rounded px-12 py-9 text-center shadow"}
 >
   <Image class="mx-auto" src={data.img.src} alt={data.img.alt} />
-  <p class="mt-3 text-black/80">{data.review}</p>
-  <p class="mt-3 font-bold">{data.name}</p>
-  {
-    data.link && (
-      <a class="underline" href={data.link}>
-        <p>{data.business}</p>
-      </a>
-    )
-  }
-  {!data.link && <p>{data.business}</p>}
+  <p class="mt-5 text-2xl font-bold">{data.title}</p>
+  <p class="mt-2 text-lg leading-relaxed">{data.text}</p>
 </div>
