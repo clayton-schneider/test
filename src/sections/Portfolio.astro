@@ -1,0 +1,43 @@
+---
+import { Image } from "@astrojs/image/components";
+const imgs = [
+  {
+    src: import("@img/portfolio/cambridge-strength.png"),
+    alt: "cambridge strength website",
+  },
+  { src: import("@img/portfolio/cruisers.png"), alt: "cruisers website" },
+  { src: import("@img/portfolio/slooh.png"), alt: "slooh website" },
+  { src: import("@img/portfolio/seidel.png"), alt: "seidel website" },
+  { src: import("@img/portfolio/slipaway.png"), alt: "slipaway website" },
+  { src: import("@img/portfolio/stingray.png"), alt: "stingrway website" },
+];
+---
+
+<section class="px-gutter py-10">
+  <div
+    class="rounded-3xl mx-auto max-w-screen-xl bg-white p-10 shadow-background"
+  >
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-4xl font-bold">
+        Your Business Should Be Proplery Represented
+      </h2>
+      <p class="mt-2 text-lg">
+        We practice a simple philosophy that translates to better results from
+        your website.
+      </p>
+    </div>
+    <div class="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+      {
+        imgs.map((img) => (
+          <div class="flex items-center justify-center">
+            <Image
+              class="h-[450px] max-w-[400px] rounded object-cover"
+              src={img.src}
+              alt={img.alt}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

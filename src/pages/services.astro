@@ -1,0 +1,122 @@
+---
+import getimage from "../imgs/services/meet-simply-sprout.png";
+import { Image } from "@astrojs/image/components";
+import Layout from "src/layouts/Layout.astro";
+import ReviewSection from "src/sections/ReviewSection.astro";
+import BeforeAfter from "src/sections/BeforeAfter.astro";
+import Portfolio from "src/sections/Portfolio.astro";
+---
+
+<Layout
+  seo={{
+    metaTitle: "Our Services | Simply Sprout",
+    metaDescription: "CHANGE THIS !!!!!",
+  }}
+>
+  <section class="px-edge py-10">
+    <div class="mx-auto max-w-screen-xl rounded bg-white p-10 shadow">
+      <div class="mx-auto max-w-xl space-y-2 text-center">
+        <p class="text-2xl font-bold">
+          Is Your Website Working For Your Business?
+        </p>
+        <h1 class="text-5xl font-bold">Meet Simply Sprout</h1>
+        <p class="text-xl leading-relaxed">
+          Simplifying the web for busy business owners so they can focus on what
+          they do best.
+        </p>
+      </div>
+      <div class="mt-10 flex justify-center">
+        <Image
+          src={import("@img/services/meet-simply-sprout.png")}
+          alt="alt text"
+        />
+      </div>
+    </div>
+  </section>
+  <ReviewSection />
+
+  <section class="px-edge py-10">
+    <div
+      class="mx-auto flex max-w-screen-xl flex-col items-center justify-between gap-5 md:flex-row"
+    >
+      <div class="max-w-xl text-center md:text-left">
+        <h2 class="text-3xl font-bold md:text-5xl">
+          Simply Sprout Simplifies Your Marketing
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed">
+          Free your time by working with Simply Sprout to simplify your
+          marketing. From web design and website care, to growth plans, Simply
+          Sprout is ready to grow your business.
+        </p>
+      </div>
+      <div class="shrink grow-0">
+        <Image
+          src={import("@img/services/simple-marketing.png")}
+          alt="simplify your marketing"
+        />
+      </div>
+    </div>
+
+    <div
+      class="mx-auto mt-10 flex max-w-screen-xl flex-col-reverse items-center justify-between gap-5 md:flex-row"
+    >
+      <div class="shrink grow-0">
+        <Image
+          src={import("@img/services/your-website.png")}
+          alt="your new strong website"
+        />
+      </div>
+      <div class="max-w-xl text-center md:text-left">
+        <p class="text-2xl font-medium text-accent">The Foundation</p>
+        <h2 class="text-5xl font-bold">Your Website</h2>
+        <p class="mt-5 text-lg leading-relaxed">
+          Every business needs a website. Get the most out of yours with a
+          website that is custom designed to match your business&apos; needs and
+          branding.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="mx-auto mt-10 flex max-w-screen-xl flex-col items-center justify-between gap-5 md:flex-row"
+    >
+      <div class="max-w-xl text-center md:text-left">
+        <p class="text-2xl font-medium text-accent">Ongoing Care</p>
+        <h2 class="text-5xl font-bold">Your Teammates</h2>
+        <p class="mt-5 text-lg leading-relaxed">
+          From start to finish we want to be a part of your team. This means
+          learning the most we can about your business so that we can craft the
+          perfect solution.
+        </p>
+      </div>
+      <div class="shrink grow-0">
+        <Image
+          src={import("@img/services/your-teammates.png")}
+          alt="your website teammates"
+        />
+      </div>
+    </div>
+
+    <div
+      class="mx-auto mt-10 flex max-w-screen-xl flex-col-reverse items-center justify-between gap-5 md:flex-row"
+    >
+      <div class="shrink grow-0">
+        <Image
+          src={import("@img/services/your-growth.png")}
+          alt="your growth"
+        />
+      </div>
+      <div class="max-w-xl text-center md:text-left">
+        <p class="text-2xl font-medium text-accent">The Foundation</p>
+        <h2 class="text-5xl font-bold">Superpowers You</h2>
+        <p class="mt-5 text-lg leading-relaxed">
+          With a strong website optimized for conversions and a team dedicated
+          to supporting you, your business can reach new heights!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <BeforeAfter />
+  <Portfolio />
+</Layout>
