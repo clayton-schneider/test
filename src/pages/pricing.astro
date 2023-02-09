@@ -1,0 +1,116 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import ReviewSection from "src/sections/ReviewSection.astro";
+---
+
+<Layout
+  seo={{
+    metaTitle: "Pricing | Simply Sprout",
+    metaDescription: "CHANGE THIS!!!",
+  }}
+>
+  <section class="px-edge py-10">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 lg:flex-row"
+    >
+      <div class="max-w-xl shrink grow-0 text-center lg:text-left">
+        <h1 class="text-5xl font-bold">Straightforward Pricing</h1>
+        <p class="mt-8 leading-relaxed">
+          Everything we do at Simply Sprout is centered around making your
+          online marketing run smoothly, and our pricing is no different.
+          Simple, straightforward, predictable pricing.
+        </p>
+      </div>
+      <div class="shrink-0 grow">
+        <Image
+          src={import("@img/pricing/website-maintenance-plans.png")}
+          alt="website management"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-10">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="w-full rounded bg-white p-10 shadow">
+        <div class="flex items-start justify-between gap-10">
+          <Icon
+            name="mdi:check"
+            size={80}
+            class="shadow rounded-full bg-accent p-3 text-white shrink-0"
+          />
+          <div class="w-full">
+            <div class="flex justify-between">
+              <h3 class="text-5xl font-bold">The Foundation</h3>
+              <p class="text-4xl font-bold text-primary">$200/mo.</p>
+            </div>
+            <p class="max-w-3xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+              assumenda voluptas laborum, odit expedita ullam? Adipisci itaque
+              dolorum aperiam natus. Ea laborum deserunt libero magni a
+              consequuntur doloribus quis autem.
+            </p>
+          </div>
+        </div>
+        <div class="mt-10">
+          <p class="text-center text-xl font-bold uppercase">Highlights</p>
+          <div class="mt-5 flex justify-between">
+            <div class="max-w-sm text-center">
+              <Icon name="mdi:check" size={40} class="mx-auto block" />
+              <p class="mt-2 text-2xl font-bold">Custom Website</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus obcaecati eos quibusdam praesentium rem libero non
+                corporis dolores deleniti voluptate!
+              </p>
+            </div>
+            <div class="max-w-sm text-center">
+              <Icon name="mdi:check" size={40} class="mx-auto block" />
+              <p class="mt-2 text-2xl font-bold">Custom Website</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus obcaecati eos quibusdam praesentium rem libero non
+                corporis dolores deleniti voluptate!
+              </p>
+            </div>
+            <div class="max-w-sm text-center">
+              <Icon name="mdi:check" size={40} class="mx-auto block" />
+              <p class="mt-2 text-2xl font-bold">Custom Website</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus obcaecati eos quibusdam praesentium rem libero non
+                corporis dolores deleniti voluptate!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <a
+            class="mt-10 inline-block rounded bg-accent p-3 text-right text-lg text-white"
+            href="/services/the-foundation"
+            >Learn More About <span class="font-bold">The Foundation</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge my-10 bg-accent py-10">
+    <div class="mx-auto max-w-2xl text-center text-white">
+      <h2 class="text-4xl font-bold">Ready To Sprout?</h2>
+      <p class="mt-2 text-lg leading-relaxed">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+        aspernatur nostrum, recusandae corporis doloribus obcaecati debitis
+        reprehenderit hic voluptatibus et illo architecto sint deleniti ullam
+        nisi id animi ab corrupti.
+      </p>
+      <a
+        class="mt-5 inline-block rounded bg-white py-6 px-7 text-lg font-bold text-accent"
+        href="/review">Request A Free Website Review</a
+      >
+    </div>
+  </section>
+  <ReviewSection />
+</Layout>
