@@ -1,0 +1,37 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import ContactForm from "@components/Forms/ContactForm";
+const fields = [
+  { fieldType: "text", id: "website", name: "Website Address" },
+  { fieldType: "text", id: "business", name: "Business Name" },
+  { fieldType: "text", id: "first", name: "First Name" },
+  { fieldType: "text", id: "last", name: "Last Name" },
+  { fieldType: "email", id: "email", name: "Email Address" },
+  { fieldType: "tel", id: "phone", name: "Phone Number" },
+  { fieldType: "textarea", id: "message", name: "Message" },
+];
+---
+
+<Layout
+  seo={{
+    metaTitle: "Free Website & Marketing Review | Simply Sprout",
+    metaDescription: "CHANGE THIS !!!",
+  }}
+>
+  <section class="px-edge py-20">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="w-full rounded bg-light-green p-10 shadow">
+        <h1 class="text-4xl font-bold">
+          Request A Website And Marketing Review
+        </h1>
+        <ContactForm
+          button="Request Your Website Review"
+          name="Simply Sprout Review Request Form"
+          message="Thank you for requesting a review of your website and marketing. Be on the lookout for a response soon!"
+          error="There was an error submitting this form. Please refresh and try again. If the problem persists, please send us an email directly."
+          fields={fields}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

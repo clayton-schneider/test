@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 interface Props {
+  button?: string;
   name: string;
   message: string;
   error: string;
@@ -11,7 +12,13 @@ interface Props {
 }
 type FormState = "ready" | "pending" | "success" | "error";
 
-const ContactForm = ({ name, message, error, fields }: Props) => {
+const ContactForm = ({
+  name,
+  message,
+  error,
+  fields,
+  button = "Send Message",
+}: Props) => {
   function initializeForm(fields: Props["fields"]) {
     const form = {};
     // @ts-ignore
@@ -101,7 +108,7 @@ const ContactForm = ({ name, message, error, fields }: Props) => {
               type={field.fieldType}
               name={field.name}
               id={field.id}
-              className="w-full bg-white py-2 pl-4 placeholder:text-black focus:outline-none"
+              className="w-full rounded bg-white py-2 pl-4 placeholder:text-black focus:outline-none"
               placeholder={field.name}
             />
           )}
@@ -110,7 +117,7 @@ const ContactForm = ({ name, message, error, fields }: Props) => {
 
       {formState === "ready" && (
         <button className="col-span-full rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary">
-          Send Message
+          {button}
         </button>
       )}
       {formState === "pending" && <p>sending...</p>}
