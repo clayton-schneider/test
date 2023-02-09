@@ -44,6 +44,7 @@ module.exports = {
         "primary-light": "#F0FAF8",
         accent: "#24685F",
         leaf: "#B2CF5E",
+        "light-green": "#D7F0DC",
         background: "#f9f9f9",
         "background-darker": "#e0e0e0",
         text: "#000",
