@@ -1,0 +1,185 @@
+---
+import { Image } from "@astrojs/image/components";
+import Layout from "src/layouts/Layout.astro";
+import Accordian from "@components/Accordian/Accordian";
+import ImageCard from "@components/Cards/ImageCard.astro";
+import IconCard from "@components/Cards/IconCard.astro";
+
+const faqs = [{ title: "Hello", content: "hello" }];
+const benefits = [
+  {
+    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
+    title: "Website",
+    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+  },
+  {
+    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
+    title: "Website Care",
+    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+  },
+  {
+    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
+    title: "Support",
+    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+  },
+];
+
+const websiteFeatures = [
+  {
+    title: "Website Hosting",
+    description:
+      "Say goodbye to slow shared hosting. We run your website on the fastest servers around the world for the quickest load times on the internet, regardless of where your visitors live.",
+    name: "mdi:check",
+  },
+  {
+    title: "Reporting",
+    description:
+      "Receive a custom report summarizing the performance of your website over the past month. The contents of the report will depend on your selected plan.",
+    name: "mdi:check",
+  },
+  {
+    title: "Security Scans",
+    description:
+      "Malicious users can try to take down even the smallest of websites. Security scans serve as a watchdog to prevent these malicious users from harming your website.",
+    name: "mdi:check",
+  },
+];
+---
+
+<Layout
+  seo={{
+    metaTitle: "The Foundation | Simply Sprout",
+    metaDescription: "CHANGE THIS !!!",
+  }}
+>
+  <section class="px-edge py-10">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 lg:flex-row"
+    >
+      <div class="max-w-xl shrink grow-0 text-center lg:text-left">
+        <h1 class="text-5xl font-bold">The Foundation</h1>
+        <p class="mt-8 leading-relaxed">
+          Everything we do at Simply Sprout is centered around making your
+          online marketing run smoothly, and our pricing is no different.
+          Simple, straightforward, predictable pricing.
+        </p>
+      </div>
+      <div class="shrink-0 grow">
+        <Image
+          src={import("@img/pricing/website-maintenance-plans.png")}
+          alt="website management"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-10">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold">
+          Everything You Need To Show Off Your Business
+        </h2>
+        <p class="mt-2 text-lg leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          laudantium expedita ut molestiae tempora reprehenderit nostrum ex
+          sequi debitis est.
+        </p>
+      </div>
+
+      <div class="flex justify-between gap-10">
+        {benefits.map((benefit) => <ImageCard data={benefit} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-10">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 lg:flex-row"
+    >
+      <div class="max-w-xl shrink grow-0 text-center lg:text-left">
+        <h2 class="text-5xl font-bold">The Old Way</h2>
+        <p class="mt-8 leading-relaxed">
+          Everything we do at Simply Sprout is centered around making your
+          online marketing run smoothly, and our pricing is no different.
+          Simple, straightforward, predictable pricing.
+        </p>
+      </div>
+      <div class="shrink-0 grow">
+        <Image
+          src={import("@img/pricing/website-maintenance-plans.png")}
+          alt="website management"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-10">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold">Website</h2>
+        <p class="mt-2 text-lg leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+          veniam repudiandae nobis molestias voluptates aperiam eius, quo
+          obcaecati explicabo ad atque ipsa animi mollitia, cumque, saepe
+          laudantium itaque debitis molestiae?
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 place-items-center items-center gap-6 pt-10 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <IconCard />
+        <IconCard />
+        <IconCard />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-10">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold">Website Care</h2>
+        <p class="mt-2 text-lg leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+          veniam repudiandae nobis molestias voluptates aperiam eius, quo
+          obcaecati explicabo ad atque ipsa animi mollitia, cumque, saepe
+          laudantium itaque debitis molestiae?
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 place-items-center items-center gap-6 pt-10 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <IconCard />
+        <IconCard />
+        <IconCard />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-10">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold">Support</h2>
+        <p class="mt-2 text-lg leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+          veniam repudiandae nobis molestias voluptates aperiam eius, quo
+          obcaecati explicabo ad atque ipsa animi mollitia, cumque, saepe
+          laudantium itaque debitis molestiae?
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 place-items-center items-center gap-6 pt-10 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <IconCard />
+        <IconCard />
+        <IconCard />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-edge py-20">
+    <div class="mx-auto max-w-screen-xl">
+      <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
+      <Accordian items={faqs} client:load />
+    </div>
+  </section>
+</Layout>
