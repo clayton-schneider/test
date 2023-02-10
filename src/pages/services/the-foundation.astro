@@ -1,47 +1,90 @@
 ---
+import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import Layout from "src/layouts/Layout.astro";
 import Accordian from "@components/Accordian/Accordian";
-import ImageCard from "@components/Cards/ImageCard.astro";
 import IconCard from "@components/Cards/IconCard.astro";
 
 const faqs = [{ title: "Hello", content: "hello" }];
-const benefits = [
+
+const websiteFeatures = [
   {
-    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
-    title: "Website",
-    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+    title: "Website Design",
+    description:
+      "All our websites are custom designed to meet the unique personality and branding of the business its for.",
+    icon: "mdi:design",
   },
   {
-    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
-    title: "Website Care",
-    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+    title: "Increase Visibility",
+    description:
+      "The technology we build our websites on helps customers find your easier. Get seen, get noticed.",
+    icon: "mdi:eye",
   },
   {
-    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
-    title: "Support",
-    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+    title: "Gain Clarity",
+    description:
+      "Customers that land on a website should be guided towards the information they are looking for. We help turn visitors into customers.",
+    icon: "mdi:magnify",
   },
 ];
 
-const websiteFeatures = [
+const careFeatures = [
   {
     title: "Website Hosting",
     description:
       "Say goodbye to slow shared hosting. We run your website on the fastest servers around the world for the quickest load times on the internet, regardless of where your visitors live.",
-    name: "mdi:check",
+    icon: "mdi:server",
   },
   {
     title: "Reporting",
     description:
       "Receive a custom report summarizing the performance of your website over the past month. The contents of the report will depend on your selected plan.",
-    name: "mdi:check",
+    icon: "teenyicons:area-chart-outline",
   },
   {
     title: "Security Scans",
     description:
       "Malicious users can try to take down even the smallest of websites. Security scans serve as a watchdog to prevent these malicious users from harming your website.",
-    name: "mdi:check",
+    icon: "mdi:security",
+  },
+  {
+    title: "Software Updates",
+    description:
+      "Software is always updating and improving. Never get left behind as we ensure that your website is running on the latest and greatest technology.",
+    icon: "mdi:update",
+  },
+  {
+    title: "Performance Scans",
+    description:
+      "A fast website is a good website. We will monitor your website’s speed to make sure that it is always performing as fast as possible.",
+    icon: "ic:baseline-speed",
+  },
+  {
+    title: "Website Backups",
+    description:
+      "Relax with the peace of mind knowing that your website is always backed up. Should an unforeseen accident take down your website, you will be back up and running in no time.",
+    icon: "ic:outline-cloud",
+  },
+];
+
+const supportFeatures = [
+  {
+    title: "Unlimited Revisions",
+    description:
+      "Unlimited revisions means that you never need to update your website again. Send us what you need changed and we will get those changes up quickly.",
+    icon: "mdi:pencil-circle-outline",
+  },
+  {
+    title: "Support Time",
+    description:
+      "Need an update to some copy or want a new landing page? We are your personal development team. Use your 30 minutes of support minutes each month for any website work you need.",
+    icon: "mdi:clock-time-eight-outline",
+  },
+  {
+    title: "Website Warranty",
+    description:
+      "Relax with the peace of mind knowing that your website is always backed up. Should an unforeseen accident take down your website, you will be back up and running in no time.",
+    icon: "mdi:shield-check-outline",
   },
 ];
 ---
@@ -59,10 +102,15 @@ const websiteFeatures = [
       <div class="max-w-xl shrink grow-0 text-center lg:text-left">
         <h1 class="text-5xl font-bold">The Foundation</h1>
         <p class="mt-8 leading-relaxed">
-          Everything we do at Simply Sprout is centered around making your
-          online marketing run smoothly, and our pricing is no different.
-          Simple, straightforward, predictable pricing.
+          What if you could snap your fingers and have a custom website designed
+          to built to showcase your business? That's exactly what our offering
+          of The Foundation is! Share your goals and vision and we'll build,
+          manage, and care for your website for you.
         </p>
+        <a
+          class="mt-5 inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+          href="/review">Request My Free Website Review</a
+        >
       </div>
       <Image
         class="rounded"
@@ -80,14 +128,57 @@ const websiteFeatures = [
           Everything You Need To Show Off Your Business
         </h2>
         <p class="mt-2 text-lg leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          laudantium expedita ut molestiae tempora reprehenderit nostrum ex
-          sequi debitis est.
+          In a sea of competition, how do you stand out from the rest? You lay a
+          strong foundation that you can build your business on top of.
         </p>
       </div>
 
       <div class="flex justify-between gap-10">
-        {benefits.map((benefit) => <ImageCard data={benefit} />)}
+        <a
+          href="#websites"
+          class="w-full max-w-md rounded px-12 py-9 text-center shadow"
+        >
+          <Icon class="mx-auto text-primary" name="mdi:check" size={60} />
+          <p class="mt-5 text-2xl font-bold">Custom Website</p>
+          <p class="mt-2 text-lg leading-relaxed">
+            Say goodbye to DIY builders like Wix and SquareSpace. Say hello to
+            your online partner. All of our services have been carefully crafted
+            with you in mind.
+          </p>
+        </a>
+
+        <a
+          href="#website-care"
+          class="w-full max-w-md rounded px-12 py-9 text-center shadow"
+        >
+          <Icon
+            name="healthicons:eco-care"
+            size={60}
+            class="mx-auto block text-primary"
+          />
+          <p class="mt-2 text-2xl font-bold">Website Care</p>
+          <p class="mt-2 text-lg leading-relaxed">
+            Everything your website needs to stay running as optimally as
+            possible. No confusing servers, bandwith limits, or logins to deal
+            with. We make sure your website stays running.
+          </p>
+        </a>
+        <a
+          href="#support"
+          class="w-full max-w-md rounded px-12 py-9 text-center shadow"
+        >
+          <Icon
+            name="mdi:support"
+            size={60}
+            class="mx-auto block text-primary"
+          />
+          <p class="mt-2 text-2xl font-bold">Ongoing Support</p>
+          <p class="mt-2 text-lg leading-relaxed">
+            Unlimited revisions and priority support means that you are never on
+            your own. Need some copy changed? An image swapped? We have you
+            covered!
+          </p>
+        </a>
       </div>
     </div>
   </section>
@@ -99,63 +190,71 @@ const websiteFeatures = [
       <div class="max-w-xl shrink grow-0 text-center lg:text-left">
         <h2 class="text-5xl font-bold">The Old Way</h2>
         <p class="mt-8 leading-relaxed">
-          Everything we do at Simply Sprout is centered around making your
-          online marketing run smoothly, and our pricing is no different.
-          Simple, straightforward, predictable pricing.
+          Most businesses take the DIY route for their websites. Pretty quickly
+          it becomes clear that trying to manage these DIY builders is more
+          trouble than it's worth.
+          <br />
+          <br />
+          With content changes and updates, the vision of what you want for your
+          website and what your customers get quickly becomes further and further
+          detached.
+          <br /><br />When you partner with Simply Sprout, your website troubles
+          are a history! See how you can say goodbye to your website troubles by
+          clicking the button below.
         </p>
+        <a
+          class="mt-5 inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+          href="/review">Request My Free Website Review</a
+        >
       </div>
-      <div class="shrink-0 grow">
-        <Image
-          src={import("@img/pricing/website-maintenance-plans.png")}
-          alt="website management"
-        />
-      </div>
+      <Image
+        class="rounded"
+        width={500}
+        src={import("@img/services/the-foundation/old-way.png")}
+        alt="website management"
+      />
     </div>
   </section>
 
-  <section class="px-edge py-10">
+  <section id="websites" class="px-edge py-10">
     <div class="mx-auto max-w-screen-xl">
       <div class="mx-auto max-w-4xl text-center">
-        <h2 class="text-4xl font-bold">Website</h2>
+        <h2 class="text-4xl font-bold">Custom Website</h2>
         <p class="mt-2 text-lg leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-          veniam repudiandae nobis molestias voluptates aperiam eius, quo
-          obcaecati explicabo ad atque ipsa animi mollitia, cumque, saepe
-          laudantium itaque debitis molestiae?
+          Every business deserves a website that is custom to its goals and
+          brand. Our custom websites are built on technology that helps
+          customers find your business, find what they're looking for, and
+          become customers.
         </p>
       </div>
       <div
         class="grid grid-cols-1 place-items-center items-center gap-6 pt-10 md:grid-cols-2 lg:grid-cols-3"
       >
-        <IconCard />
-        <IconCard />
-        <IconCard />
+        {websiteFeatures.map((feature) => <IconCard data={feature} />)}
       </div>
     </div>
   </section>
 
-  <section class="px-edge py-10">
+  <section id="website-care" class="px-edge py-10">
     <div class="mx-auto max-w-screen-xl">
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="text-4xl font-bold">Website Care</h2>
         <p class="mt-2 text-lg leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-          veniam repudiandae nobis molestias voluptates aperiam eius, quo
-          obcaecati explicabo ad atque ipsa animi mollitia, cumque, saepe
-          laudantium itaque debitis molestiae?
+          Keeping your business website healthy is an often overlooked step.
+          Consequently, many websites end up slow and vulnerable to malicious
+          users. With Simply Sprout, you never have to worry that your website
+          is not working at its best.
         </p>
       </div>
       <div
         class="grid grid-cols-1 place-items-center items-center gap-6 pt-10 md:grid-cols-2 lg:grid-cols-3"
       >
-        <IconCard />
-        <IconCard />
-        <IconCard />
+        {careFeatures.map((feature) => <IconCard data={feature} />)}
       </div>
     </div>
   </section>
 
-  <section class="px-edge py-10">
+  <section id="support" class="px-edge py-10">
     <div class="mx-auto max-w-screen-xl">
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="text-4xl font-bold">Support</h2>
@@ -169,17 +268,15 @@ const websiteFeatures = [
       <div
         class="grid grid-cols-1 place-items-center items-center gap-6 pt-10 md:grid-cols-2 lg:grid-cols-3"
       >
-        <IconCard />
-        <IconCard />
-        <IconCard />
+        {supportFeatures.map((feature) => <IconCard data={feature} />)}
       </div>
     </div>
   </section>
 
-  <section class="px-edge py-20">
+  <!-- <section class="px-edge py-20">
     <div class="mx-auto max-w-screen-xl">
       <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
       <Accordian items={faqs} client:load />
     </div>
-  </section>
+  </section> -->
 </Layout>
