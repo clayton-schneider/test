@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import IconCard from "@components/Cards/IconCard.astro";
 import BenefitsSection from "src/sections/BenefitsSection.astro";
 import ReviewSection from "src/sections/ReviewSection.astro";
@@ -18,13 +19,19 @@ import Layout from "../layouts/Layout.astro";
         <div class="max-w-2xl">
           <h1 class="text-lg">Web Design Agency</h1>
           <h2 class="text-4xl font-bold">
-            What if your website generated more traffic, leads, and sales?
+            What if Your Website Generated More Traffic, Leads, and Sales?
           </h2>
-          <p class="mt-5 max-w-lg text-lg leading-relaxed">
-            Not sure where to start? Request your free review of your website
-            and marketing. We’ll show you how to make improvements in just 15
-            minutes!
+          <p class="mt-5 text-lg leading-relaxed">
+            Busy business owners choose Simply Sprout when they want more
+            visibility, more customers, more time. Request your free review of
+            your website and marketing. We’ll show you how to make improvements
+            in just 15 minutes!
           </p>
+          <a
+            href="/request"
+            class="mt-5 inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+            >Request My Free Website Review</a
+          >
         </div>
         <div class="h-[400px] w-[500px] bg-red-50"></div>
       </div>
@@ -34,7 +41,12 @@ import Layout from "../layouts/Layout.astro";
   <section class="px-edge py-20">
     <div class="mx-auto max-w-screen-xl">
       <div class="flex justify-between gap-10">
-        <div class="h-[660px] w-[780px] bg-red-50"></div>
+        <div>
+          <Image
+            src={import("@img/home/busy-business-owner.png")}
+            alt="busy business owner"
+          />
+        </div>
         <div class="max-w-xl">
           <h2 class="text-4xl font-bold">
             A Web Design Agency For Busy Business Owners

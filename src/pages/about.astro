@@ -24,13 +24,17 @@ import ReviewSection from "src/sections/ReviewSection.astro";
           >
         </p>
         <p class="mt-2 text-lg leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugit,
-          aliquam voluptates animi accusamus provident delectus perferendis!
-          Repudiandae similique aspernatur eius, ex doloribus nemo minus quidem
-          doloremque neque facilis nesciunt.
+          <span class="font-bold">Setting Our Roots:</span> Simply Sprout was founded
+          in 2019 with one goal in mind, help busy business owners with their marketing.
+          Today, our clients love what Simply Sprout stands for, your partner that
+          helps your grow your business and spend more time doing what your love.
         </p>
       </div>
-      <div class="mt-5 h-[550px] w-full bg-red-50">1280x550</div>
+      <Image
+        class="mt-5 rounded"
+        src={import("@img/about/setting-roots.png")}
+        alt="plant setting its roots"
+      />
     </div>
   </section>
 
@@ -50,9 +54,16 @@ import ReviewSection from "src/sections/ReviewSection.astro";
           <p class="text-2xl font-medium text-accent">Our Story</p>
           <h2 class="text-5xl font-bold">How It All Started</h2>
           <p class="mt-5 text-lg leading-relaxed">
-            Every business needs a website. Get the most out of yours with a
-            website that is custom designed to match your business&apos; needs
-            and branding.
+            Building websites has always fascinated me. When I was a kid I would
+            build websites on my parents clunky Dell desktop using a software
+            called Dreamweaver. I grew up watching the internet mature and was
+            there to learn at everystep.
+            <br />
+            <br />
+            Today I have paired my childhood fascination for websites and the internet
+            with my strong business sense and listening skills. This combination
+            is the essence of what Simply Sprout stands for. Simple, effective marketing
+            services designed in a manner that your business actually benefits from.
           </p>
         </div>
       </div>
@@ -70,16 +81,16 @@ import ReviewSection from "src/sections/ReviewSection.astro";
           </p>
           <h2 class="text-5xl font-bold">We Like Green</h2>
           <p class="mt-5 text-lg leading-relaxed">
-            Every business needs a website. Get the most out of yours with a
-            website that is custom designed to match your business&apos; needs
-            and branding.
+            Every website we build is hosted on servers that purchase renewable
+            energy certificates that match 100% of the energry needed to power
+            our websites (Certified by Green Web Foundation).
           </p>
         </div>
         <div class="shrink grow-0">
           <Image
-            class="max-w-[500px] h-[500px] object-cover"
-            src={import("@img/about/headshot-schneider.jpg")}
-            alt="founder - clayton schneider"
+            class="rounded"
+            src={import("@img/about/environmentally.png")}
+            alt="environmentally friendly simply sprout"
           />
         </div>
       </div>
