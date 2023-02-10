@@ -21,15 +21,17 @@ import CallToAction from "src/sections/CallToAction.astro";
         <p class="mt-8 leading-relaxed">
           Everything we do at Simply Sprout is centered around making your
           online marketing run smoothly, and our pricing is no different.
-          Simple, straightforward, predictable pricing.
+          <span class="font-bold">
+            Simple, straightforward, predictable pricing.
+          </span>
         </p>
       </div>
-      <div class="shrink-0 grow">
-        <Image
-          src={import("@img/pricing/website-maintenance-plans.png")}
-          alt="website management"
-        />
-      </div>
+      <Image
+        class="rounded shrink grow-0"
+        width={500}
+        src={import("@img/pricing/pricing.png")}
+        alt="website management"
+      />
     </div>
   </section>
 
@@ -37,21 +39,24 @@ import CallToAction from "src/sections/CallToAction.astro";
     <div class="mx-auto max-w-screen-xl">
       <div class="w-full rounded bg-white p-10 shadow">
         <div class="flex items-start justify-between gap-10">
-          <Icon
-            name="mdi:check"
-            size={80}
-            class="shadow rounded-full bg-accent p-3 text-white shrink-0"
+          <Image
+            class="rounded-full"
+            width={125}
+            src={import("@img/pricing/the-foundation.png")}
+            alt="the foundation service"
           />
+
           <div class="w-full">
             <div class="flex justify-between">
               <h3 class="text-5xl font-bold">The Foundation</h3>
               <p class="text-4xl font-bold text-primary">$200/mo.</p>
             </div>
             <p class="max-w-3xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              assumenda voluptas laborum, odit expedita ullam? Adipisci itaque
-              dolorum aperiam natus. Ea laborum deserunt libero magni a
-              consequuntur doloribus quis autem.
+              Simply Sprout has reimagined how you think about your website. Say
+              good by to DIY builders and hello to your new website partner. The
+              Foundation is for business owners who want a website that
+              increases their visibility <span class="font-bold">AND</span> a partner
+              they can trust to make sure their website is always in tip top shape.
             </p>
           </div>
         </div>
@@ -59,30 +64,42 @@ import CallToAction from "src/sections/CallToAction.astro";
           <p class="text-center text-xl font-bold uppercase">Highlights</p>
           <div class="mt-5 flex justify-between">
             <div class="max-w-sm text-center">
-              <Icon name="mdi:check" size={40} class="mx-auto block" />
+              <Icon
+                name="ic:outline-desktop-windows"
+                size={50}
+                class="mx-auto block text-primary"
+              />
               <p class="mt-2 text-2xl font-bold">Custom Website</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus obcaecati eos quibusdam praesentium rem libero non
-                corporis dolores deleniti voluptate!
+                Your business and its goals are unique. Your website deserves to
+                be just as unique. We custom design your website to optimize for
+                your goals.
               </p>
             </div>
             <div class="max-w-sm text-center">
-              <Icon name="mdi:check" size={40} class="mx-auto block" />
-              <p class="mt-2 text-2xl font-bold">Custom Website</p>
+              <Icon
+                name="healthicons:eco-care"
+                size={50}
+                class="mx-auto block text-primary"
+              />
+              <p class="mt-2 text-2xl font-bold">Website Care</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus obcaecati eos quibusdam praesentium rem libero non
-                corporis dolores deleniti voluptate!
+                Everything your website needs to stay running as optimally as
+                possible. No confusing servers, bandwith limits, or logins to
+                deal with. We make sure your website stays running.
               </p>
             </div>
             <div class="max-w-sm text-center">
-              <Icon name="mdi:check" size={40} class="mx-auto block" />
-              <p class="mt-2 text-2xl font-bold">Custom Website</p>
+              <Icon
+                name="mdi:support"
+                size={50}
+                class="mx-auto block text-primary"
+              />
+              <p class="mt-2 text-2xl font-bold">Ongoing Support</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus obcaecati eos quibusdam praesentium rem libero non
-                corporis dolores deleniti voluptate!
+                Unlimited revisions and priority support means that you are
+                never on your own. Need some copy changed? An image swapped? We
+                have you covered!
               </p>
             </div>
           </div>
