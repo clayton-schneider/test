@@ -1,0 +1,45 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import ContactForm from "@components/Forms/ContactForm";
+
+const fields = [
+  { fieldType: "text", id: "first", name: "First Name" },
+  { fieldType: "text", id: "last", name: "Last Name" },
+  { fieldType: "email", id: "email", name: "Email Address" },
+  { fieldType: "tel", id: "phone", name: "Phone Number" },
+];
+---
+
+<Layout
+  seo={{
+    metaTitle: "The Flourishing | Simply Sprout",
+    metaDescription: "CHANGE THIS !!!",
+  }}
+>
+  <section class="px-edge py-20">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="mx-auto max-w-screen-lg text-center">
+        <h1 class="text-5xl font-bold">The Flourishing</h1>
+        <p class="mt-2 text-lg leading-relaxed">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse ipsum
+          architecto, quia nihil nesciunt ipsam quae sed corrupti quibusdam qui.
+          Dolorem cumque eos veniam doloribus! Modi adipisci odit labore esse?
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="px-edge pb-20">
+    <div class="mx-auto max-w-screen-lg">
+      <div class="w-full rounded bg-light-green p-10 shadow">
+        <h2 class="text-center text-4xl font-bold">Join the Waitlist</h2>
+        <ContactForm
+          button="Join The Waitlist"
+          name="Simply Sprout Flourishing Waitlist Form"
+          message="Thank you for joining our waitlist for The Flourishing, we will notify when this service is available."
+          error="There was an error submitting this form. Please refresh and try again. If the problem persists, please send us an email directly."
+          fields={fields}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

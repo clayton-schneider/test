@@ -6,6 +6,11 @@ const links = [
   {
     linkText: "Services",
     link: "/services",
+    sublinks: [
+      { link: "/services/the-foundation", linkText: "The Foundation" },
+      { link: "/services/the-cleanup", linkText: "The Cleanup" },
+      { link: "/services/the-flourishing", linkText: "The Flourishing" },
+    ],
   },
   { linkText: "Pricing", link: "/pricing" },
   { linkText: "Contact", link: "/contact" },
@@ -17,10 +22,8 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<header class={(className ? className : "") + " p-5"}>
-  <div
-    class="relative mx-auto flex max-w-screen-xl items-center justify-between"
-  >
+<header class={(className ? className : "") + " p-5 relative "}>
+  <div class="mx-auto flex max-w-screen-xl items-center justify-between">
     <a href="/" class="font-logo text-2xl">
       <Icon name="logo" class="w-[158px] h-[60px]" />
     </a>
