@@ -20,7 +20,7 @@ const after = [
     </h2>
 
     <div
-      class="mt-10 flex flex-col items-center justify-center gap-10 md:flex-row md:items-start"
+      class="mt-10 flex flex-col items-center justify-center gap-10 md:flex-row md:items-stretch"
     >
       <div class="rounded bg-gray-200 py-12 px-11">
         <p class="text-center text-3xl font-bold">Before Simply Sprout</p>
@@ -32,7 +32,7 @@ const after = [
             height={307}
           />
         </div>
-        <ul class="mt-5 flex flex-col items-center">
+        <ul class="mt-5 flex flex-col items-center text-center">
           {
             before.map((item) => (
               <li class="marker:text-accent list-disc text-lg">{item}</li>
@@ -51,7 +51,7 @@ const after = [
             height={307}
           />
         </div>
-        <ul class="mt-5 flex flex-col items-center">
+        <ul class="mt-5 flex flex-col items-center text-center">
           {
             after.map((item) => (
               <li class="list-disc text-lg marker:text-white">{item}</li>
