@@ -69,8 +69,8 @@ const reviews = [
 ];
 ---
 
-<section class="px-edge py-20">
-  <div class="text-center">
+<section class="py-20">
+  <div class="px-edge text-center">
     <div class="flex justify-center gap-2">
       {
         [...Array(5).keys()].map((num) => (
@@ -108,9 +108,12 @@ const reviews = [
     perPage: 3,
     perMove: 1,
     breakpoints: {
-      640: {
+      900: {
         perPage: 1,
         interval: 3000,
+      },
+      1200: {
+        perPage: 2,
       },
     },
     classes: {

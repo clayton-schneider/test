@@ -12,7 +12,7 @@ import CallToAction from "src/sections/CallToAction.astro";
     metaDescription: "CHANGE THIS!!!",
   }}
 >
-  <section class="px-edge py-10">
+  <section class="px-edge py-10 lg:py-20">
     <div
       class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 lg:flex-row"
     >
@@ -38,20 +38,26 @@ import CallToAction from "src/sections/CallToAction.astro";
   <section class="px-edge py-10">
     <div class="mx-auto max-w-screen-xl">
       <div class="w-full rounded bg-white p-10 shadow">
-        <div class="flex items-start justify-between gap-10">
+        <div
+          class="flex flex-col items-start justify-between gap-10 md:flex-row"
+        >
           <Image
-            class="rounded-full"
+            class="rounded-full mx-auto"
             width={125}
             src={import("@img/pricing/the-foundation.png")}
             alt="the foundation service"
           />
 
           <div class="w-full">
-            <div class="flex justify-between">
-              <h3 class="text-5xl font-bold">The Foundation</h3>
-              <p class="text-4xl font-bold text-primary">$200/mo.</p>
+            <div
+              class="flex flex-col justify-between text-center md:flex-row md:text-left"
+            >
+              <h3 class="text-4xl font-bold lg:text-5xl">The Foundation</h3>
+              <p class="text-2xl font-bold text-primary lg:text-4xl">
+                $200/mo.
+              </p>
             </div>
-            <p class="max-w-3xl">
+            <p class="text-center md:text-left lg:max-w-3xl">
               Simply Sprout has reimagined how you think about your website. Say
               good by to DIY builders and hello to your new website partner. The
               Foundation is for business owners who want a website that
@@ -62,7 +68,9 @@ import CallToAction from "src/sections/CallToAction.astro";
         </div>
         <div class="mt-10">
           <p class="text-center text-xl font-bold uppercase">Highlights</p>
-          <div class="mt-5 flex justify-between">
+          <div
+            class="mt-5 flex flex-col items-center justify-between md:flex-row md:items-stretch"
+          >
             <div class="max-w-sm text-center">
               <Icon
                 name="ic:outline-desktop-windows"

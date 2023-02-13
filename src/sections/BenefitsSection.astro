@@ -1,39 +1,60 @@
 ---
-import ImageCard from "@components/Cards/ImageCard.astro";
+import { Icon } from "astro-icon";
 
 const benefits = [
   {
-    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
-    title: "Simplify Simplify Simplify",
-    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+    icon: "mdi:eye",
+    title: "Increase Visibility",
+    text: "The technology we build our websites on helps customers find your easier. Get seen, get noticed.",
   },
   {
-    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
-    title: "Simplify Simplify Simplify",
-    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+    icon: "mdi:people-plus",
+    title: "Find More Customers",
+    text: "Our website's are designed with intent in mind, which turn visitors into customers.",
   },
   {
-    img: { src: import("@img/clients/rsf-review.png"), alt: "alt" },
-    title: "Simplify Simplify Simplify",
-    text: "Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your online partner. All of our services have been carefully crafted with you in mind.",
+    icon: "mdi:clock-plus-outline",
+    title: "Reclaim Your Time",
+    text: "Never login to manage your website again! Allow us to execute your vision.",
   },
 ];
 ---
 
-<section class="px-edge py-20">
+<section class="px-edge py-10 lg:py-20">
   <div class="mx-auto max-w-screen-xl">
     <div class="mx-auto max-w-4xl text-center">
       <h2 class="text-4xl font-bold">
         There's A Better Way To Market Your Business... The Simply Sprout Way!
       </h2>
       <p class="mt-5 text-lg leading-relaxed">
-        Say goodbye to DIY builders like Wix and SquareSpace. Say hello to your
-        online partner. All of our services have been carefully crafted with you
-        in mind.
+        Website's are complex beasts. That's why we have re-imagined how
+        business owners interact with thier websites. Simply Sprout is your
+        partner caring for the well-being of your website.
       </p>
     </div>
-    <div class="mt-20 flex justify-center gap-10">
-      {benefits.map((benefit) => <ImageCard data={benefit} />)}
+    <div
+      class="mt-10 flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-stretch"
+    >
+      {
+        benefits.map((benefit) => (
+          <div class="w-full max-w-md rounded px-12 py-9 text-center shadow">
+            <Icon
+              name={benefit.icon}
+              size={60}
+              class="text-primary mx-auto block"
+            />
+            <p class="mt-2 text-2xl font-bold">{benefit.title}</p>
+            <p class="mt-2 text-lg leading-relaxed">{benefit.text}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-10 text-center">
+      <a
+        href="/request"
+        class="inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+        >Request My Free Website Review</a
+      >
     </div>
   </div>
 </section>

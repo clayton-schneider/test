@@ -1,0 +1,4 @@
+Sitemap: https://www.simply-sprout.com/sitemap-index.xml
+
+User-agent: *
+Disallow: /assets/*

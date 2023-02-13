@@ -13,10 +13,12 @@ import Layout from "../layouts/Layout.astro";
     metaDescription: "Meta Description For Simply Sprout",
   }}
 >
-  <section class="px-edge py-20">
+  <section class="px-edge py-10 lg:py-20">
     <div class="mx-auto max-w-screen-xl">
-      <div class="flex justify-between gap-10">
-        <div class="max-w-2xl">
+      <div
+        class="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row lg:items-start"
+      >
+        <div class="max-w-2xl text-center lg:text-left">
           <h1 class="text-lg">Web Design Agency</h1>
           <h2 class="text-4xl font-bold">
             What if Your Website Generated More Traffic, Leads, and Sales?
@@ -38,34 +40,42 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <section class="px-edge py-20">
+  <section class="px-edge py-10 lg:py-20">
     <div class="mx-auto max-w-screen-xl">
-      <div class="flex justify-between gap-10">
+      <div
+        class="flex flex-col items-center justify-between gap-10 lg:flex-row lg:items-start"
+      >
         <div>
           <Image
             src={import("@img/home/busy-business-owner.png")}
             alt="busy business owner"
           />
         </div>
-        <div class="max-w-xl">
+        <div class="text-center lg:max-w-xl lg:text-left">
           <h2 class="text-4xl font-bold">
             A Web Design Agency For Busy Business Owners
           </h2>
           <div class="my-5 space-y-5 text-lg">
             <p>
-              We’re Simply Sprout, and we design websites that generate paying
-              clients.
+              We’re Simply Sprout, and we design websites that make running a
+              business easier.
             </p>
             <p>
-              Most websites end up neglected and we don’t blame you. Staying on
-              top of your website is a time consuming task.
+              We know how difficult it can be to stay on top of marketing your
+              and your website.
             </p>
             <p>
               That’s why busy business owners just like you partner with Simply
               Sprout. Your marketing partner dedicated to helping your spend
-              more time on what you love.
+              less time worrying about your website and more time in your
+              business.
             </p>
           </div>
+          <a
+            href="/request"
+            class="mt-5 inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+            >Request My Free Website Review</a
+          >
         </div>
       </div>
     </div>
@@ -74,37 +84,42 @@ import Layout from "../layouts/Layout.astro";
   <ReviewSection />
   <BenefitsSection />
 
-  <section class="px-edge py-20">
+  <section class="px-edge py-10 lg:py-20">
     <div class="mx-auto max-w-screen-xl">
-      <div class="flex justify-between gap-10">
+      <div
+        class="flex flex-col items-center justify-between gap-10 lg:flex-row lg:items-start"
+      >
         <div>
           <Image
             src={import("@img/home/partnership.png")}
             alt="partnership with simply sprout"
           />
         </div>
-        <div class="max-w-xl">
+        <div class="text-center lg:max-w-xl lg:text-left">
           <h2 class="text-4xl font-bold">
-            A Web Design Agency For Busy Business Owners
+            An Agency You Will Actually Want To Work With
           </h2>
           <div class="my-5 space-y-5 text-lg">
             <p>
-              We’re Simply Sprout, and we design websites that generate paying
-              clients.
+              Tired of feeling stuck, overwhelmed, or left on your own? Not sure
+              the best next steps for your business and website?
             </p>
             <p>
-              Most websites end up neglected and we don’t blame you. Staying on
-              top of your website is a time consuming task.
+              Working with Simply Sprout is a breath of fresh air! We build
+              relationships founded on trust and understanding. Let's work
+              together to increase your visibiliy, find more customers, and
+              reclaim your time.
             </p>
-            <p>
-              That’s why busy business owners just like you partner with Simply
-              Sprout. Your marketing partner dedicated to helping your spend
-              more time on what you love.
-            </p>
+            <p></p>
+            <a
+              href="/request"
+              class="mt-5 inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+              >Request My Free Website Review</a
+            >
           </div>
         </div>
       </div>
     </div>
   </section>
-  <ServicesSection />
+  <!-- <ServicesSection /> -->
 </Layout>
