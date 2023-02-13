@@ -1,0 +1,35 @@
+---
+import { Image } from "@astrojs/image/components";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout
+  seo={{
+    metaTitle: "Page Not Found | Simply Sprout",
+    metaDescription: "The page your are looking for can't be found.",
+  }}
+>
+  <section class="py-10 px-edge lg:py-20">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between lg:flex-row"
+    >
+      <div>
+        <Image src={import("@img/404/404.png")} alt="404 error" />
+      </div>
+      <div class="relative z-10 max-w-lg text-center lg:text-left">
+        <h1 class="text-primary">Error Code 404</h1>
+        <h2 class="text-5xl font-bold">Oh no... looks like you're lost</h2>
+        <p class="mt-5">
+          sorry, we can&apos;t seem to find this page. it was either removed,
+          renamed, or doesn't exist.
+        </p>
+        <a
+          href="/"
+          class="mt-5 inline-block rounded border-2 border-transparent bg-primary py-6 px-7 text-center leading-none text-white transition-all duration-300 hover:border-primary hover:bg-transparent hover:text-primary"
+        >
+          Take Me Home
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

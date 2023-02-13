@@ -28,8 +28,10 @@ const faqs = [{ title: "Hello", content: "hello" }];
           Request A Website And Marketing Review
         </h1>
         <ContactForm
+          client:load
           button="Request Your Website Review"
           name="Simply Sprout Review Request Form"
+          redirect="/success"
           message="Thank you for requesting a review of your website and marketing. Be on the lookout for a response soon!"
           error="There was an error submitting this form. Please refresh and try again. If the problem persists, please send us an email directly."
           fields={fields}

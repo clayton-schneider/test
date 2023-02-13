@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 interface Props {
   button?: string;
+  redirect?: string;
   name: string;
   message: string;
   error: string;
@@ -14,6 +15,7 @@ type FormState = "ready" | "pending" | "success" | "error";
 
 const ContactForm = ({
   name,
+  redirect,
   message,
   error,
   fields,
@@ -60,7 +62,11 @@ const ContactForm = ({
         "https://send-email.simplysprout.workers.dev/",
         requestOptions
       );
-      setFormState("success");
+      if (redirect) {
+        document.location.href = redirect;
+      } else {
+        setFormState("success");
+      }
     } catch (err) {
       setFormState("error");
     }
