@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
   <section class="px-edge py-10 lg:py-20">
     <div class="mx-auto max-w-screen-xl">
       <div
-        class="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row lg:items-start"
+        class="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row lg:items-stretch"
       >
         <div class="max-w-2xl text-center lg:text-left">
           <h1 class="text-lg">Web Design Agency</h1>
@@ -34,7 +34,15 @@ import Layout from "../layouts/Layout.astro";
             >Request My Free Website Review</a
           >
         </div>
-        <div class="h-[400px] w-[500px] bg-red-50"></div>
+        <div class="h-full w-full max-w-[560px] shrink-0 grow">
+          <iframe
+            class="h-[250px] w-full md:h-[300px] xl:h-[315px]"
+            src="https://www.youtube.com/embed/z0J1MMLvnz0"
+            title="Meet Simply Sprout - YouTube Player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>
