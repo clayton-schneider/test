@@ -2,10 +2,7 @@
 import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import Layout from "src/layouts/Layout.astro";
-import Accordian from "@components/Accordian/Accordian";
 import IconCard from "@components/Cards/IconCard.astro";
-
-const faqs = [{ title: "Hello", content: "hello" }];
 
 const websiteFeatures = [
   {
@@ -92,7 +89,8 @@ const supportFeatures = [
 <Layout
   seo={{
     metaTitle: "The Foundation | Simply Sprout",
-    metaDescription: "CHANGE THIS !!!",
+    metaDescription:
+      "Web design agency re-imagining websites for the busy business owner. Request your free website review.",
   }}
 >
   <section class="px-edge py-10">
@@ -274,11 +272,4 @@ const supportFeatures = [
       </div>
     </div>
   </section>
-
-  <!-- <section class="px-edge py-20">
-    <div class="mx-auto max-w-screen-xl">
-      <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
-      <Accordian items={faqs} client:load />
-    </div>
-  </section> -->
 </Layout>

@@ -1,16 +1,15 @@
 ---
 import { Image } from "@astrojs/image/components";
-import IconCard from "@components/Cards/IconCard.astro";
 import BenefitsSection from "src/sections/BenefitsSection.astro";
 import ReviewSection from "src/sections/ReviewSection.astro";
-import ServicesSection from "src/sections/ServicesSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
   seo={{
     metaTitle: "Simply Sprout",
-    metaDescription: "Meta Description For Simply Sprout",
+    metaDescription:
+      "Web design agency offering services that help you win more visibility, more customers, and more time.",
   }}
 >
   <section class="px-edge py-10 lg:py-20">
@@ -121,5 +120,4 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <!-- <ServicesSection /> -->
 </Layout>
