@@ -13,23 +13,21 @@ import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
+import partytown from "@astrojs/partytown";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://simply-sprout.com",
-  integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    react(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-    sitemap(),
-  ],
+  integrations: [tailwind({
+    config: {
+      applyBaseStyles: false
+    }
+  }), react(), image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), sitemap(), partytown()],
   vite: {
     ssr: {
-      noExternal: ["@splidejs/react-splide"],
-    },
-  },
+      noExternal: ["@splidejs/react-splide"]
+    }
+  }
 });
