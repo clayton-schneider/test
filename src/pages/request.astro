@@ -9,10 +9,50 @@ const fields = [
   { fieldType: "text", id: "last", name: "Last Name" },
   { fieldType: "email", id: "email", name: "Email Address" },
   { fieldType: "tel", id: "phone", name: "Phone Number" },
-  { fieldType: "textarea", id: "message", name: "Message" },
+  {
+    fieldType: "textarea",
+    id: "goals",
+    name: "What are your goals for your website?",
+  },
 ];
 
-const faqs = [{ title: "Hello", content: "hello" }];
+const faqs = [
+  {
+    title: "What is a website review?",
+    content:
+      "We will record a video that reviews your website and provides actionable steps that you can take to improve your website.",
+  },
+  {
+    title: "Who is a review for?",
+    content:
+      "This service is for business owners that recognize their website is a phenomenal tool and want to see it used to its full potential.",
+  },
+  {
+    title: "Why should I request a review?",
+    content:
+      "Our website reviews are provided free of charge. You will receive a personally recorded video pointing out the different areas your website could be improved, as well as steps you could complete to reach those improvements.",
+  },
+  {
+    title: "How long will it take to receive a review?",
+    content:
+      "We record reviews in order of them being requested. Depending on how many requests we have will determine how long it takes to record a review. Typically, you will receive your review in 2 business days.",
+  },
+  {
+    title: "Am I eligible for a review?",
+    content:
+      "If you have a business and your business has a website that you would like reviewed, then we will review it.",
+  },
+  {
+    title: "Do I have to use your services?",
+    content:
+      "No! At the end of your video we will provide insight and resources that you can reference to make the changes you need all on your own.",
+  },
+  {
+    title: "What do you look at when you complete a review?",
+    content:
+      "Each review is different because each business and their website is different. We start with what is most impactful, such as steps you can take to increase your website's visibility and win more customer.",
+  },
+];
 ---
 
 <Layout
@@ -23,7 +63,7 @@ const faqs = [{ title: "Hello", content: "hello" }];
 >
   <section class="px-edge py-20">
     <div class="mx-auto max-w-screen-lg">
-      <div class="w-full rounded bg-light-green p-10 shadow">
+      <div class="w-full rounded bg-light-green p-5 shadow lg:p-10">
         <h1 class="text-4xl font-bold">
           Request A Website And Marketing Review
         </h1>
@@ -41,7 +81,7 @@ const faqs = [{ title: "Hello", content: "hello" }];
   </section>
 
   <section class="px-edge py-20">
-    <div class="mx-auto max-w-screen-xl">
+    <div class="mx-auto max-w-screen-lg">
       <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
       <Accordian items={faqs} client:load />
     </div>
